@@ -1,0 +1,300 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* SOLAR 360 ULTRA LUXURY DESIGN SYSTEM - Level ∞ UI/UX */
+
+@layer base {
+  :root {
+    /* Ultra Premium Dark Foundation */
+    --background: 240 8% 5%;
+    --foreground: 0 0% 98%;
+
+    /* Solar 360 Signature Palette */
+    --solar-core: 48 100% 67%;
+    --solar-platinum: 45 15% 85%;
+    --solar-gold: 42 87% 55%;
+    --solar-amber: 43 96% 56%;
+    
+    /* Luxury Tech Foundation */
+    --tech-obsidian: 240 12% 8%;
+    --tech-graphite: 240 6% 15%;
+    --tech-slate: 240 4% 25%;
+    --tech-silver: 240 3% 70%;
+    
+    /* Trust & Reliability Colors */
+    --trust-blue: 214 84% 56%;
+    --trust-teal: 189 85% 60%;
+    --trust-green: 158 64% 52%;
+    
+    /* Energy Dynamics */
+    --energy-cyan: 187 85% 70%;
+    --energy-electric: 195 100% 65%;
+    --energy-plasma: 280 90% 70%;
+    
+    /* Ultra Luxury Glass & Effects */
+    --glass-bg: 240 10% 6%;
+    --glass-border: 48 100% 67%;
+    --glass-shadow: 240 15% 3%;
+    --glass-premium: 240 8% 8%;
+    
+    /* Premium Semantic Tokens */
+    --card: 240 10% 6%;
+    --card-foreground: 0 0% 98%;
+    --card-premium: 240 8% 8%;
+    
+    --popover: 240 10% 6%;
+    --popover-foreground: 0 0% 98%;
+    
+    --primary: 48 100% 67%;
+    --primary-foreground: 240 12% 8%;
+    --primary-glow: 48 100% 75%;
+    
+    --secondary: 240 6% 15%;
+    --secondary-foreground: 0 0% 95%;
+    
+    --muted: 240 4% 25%;
+    --muted-foreground: 240 3% 70%;
+    
+    --accent: 189 85% 60%;
+    --accent-foreground: 240 12% 8%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 240 6% 15%;
+    --input: 240 10% 6%;
+    --ring: 48 100% 67%;
+    
+    /* Ultra Luxury Gradients */
+    --gradient-solar: linear-gradient(135deg, hsl(var(--solar-core)), hsl(var(--solar-gold)));
+    --gradient-premium: linear-gradient(145deg, hsl(var(--solar-platinum)), hsl(var(--solar-amber)));
+    --gradient-trust: linear-gradient(90deg, hsl(var(--trust-blue)), hsl(var(--trust-teal)));
+    --gradient-energy: linear-gradient(180deg, hsl(var(--energy-cyan)), hsl(var(--energy-electric)));
+    --gradient-tech: linear-gradient(135deg, hsl(var(--tech-obsidian)), hsl(var(--tech-graphite)));
+    --gradient-hero: radial-gradient(ellipse at center, hsl(var(--solar-core) / 0.15), transparent 80%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--glass-bg) / 0.95), hsl(var(--tech-graphite) / 0.8));
+    
+    /* Premium Shadows & Effects */
+    --shadow-solar: 0 0 60px hsl(var(--solar-core) / 0.3);
+    --shadow-premium: 0 25px 80px hsl(var(--glass-shadow) / 0.9);
+    --shadow-floating: 0 15px 40px hsl(var(--tech-obsidian) / 0.7);
+    --shadow-trust: 0 0 50px hsl(var(--trust-blue) / 0.2);
+    --shadow-luxury: 0 20px 60px -10px hsl(var(--solar-gold) / 0.3);
+    
+    /* Animation Variables */
+    --animation-speed-fast: 0.2s;
+    --animation-speed-normal: 0.4s;
+    --animation-speed-slow: 0.8s;
+    --animation-curve-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --animation-curve-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    --animation-curve-elastic: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    --radius: 1rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .light {
+    /* Light mode variations for day-time solar interface */
+    --background: 200 20% 98%;
+    --foreground: 220 50% 8%;
+    --solar-core: 45 100% 50%;
+    --glass-bg: 200 30% 95%;
+    --gradient-hero: radial-gradient(ellipse at center, hsl(var(--solar-core) / 0.2), transparent 70%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground overflow-x-hidden;
+    background: radial-gradient(ellipse at top, hsl(var(--space-medium)) 0%, hsl(var(--background)) 50%);
+    min-height: 100vh;
+  }
+  
+  /* Advanced Scroll Behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* ELITE COMPONENT CLASSES */
+@layer components {
+  /* Glassmorphism Cards */
+  .glass-card {
+    @apply relative backdrop-blur-xl border border-white/10;
+    background: linear-gradient(145deg, hsl(var(--glass-bg) / 0.1), hsl(var(--space-medium) / 0.05));
+    box-shadow: var(--shadow-floating);
+  }
+  
+  .glass-card-premium {
+    @apply glass-card;
+    background: linear-gradient(145deg, hsl(var(--glass-bg) / 0.15), hsl(var(--space-medium) / 0.1));
+    border: 1px solid hsl(var(--solar-core) / 0.3);
+    box-shadow: var(--shadow-premium), inset 0 1px 0 hsl(var(--solar-core) / 0.1);
+  }
+  
+  /* Solar Energy Button */
+  .btn-solar {
+    @apply relative px-8 py-4 rounded-2xl font-semibold overflow-hidden;
+    @apply transform transition-all duration-300 hover:scale-105;
+    background: var(--gradient-solar);
+    color: hsl(var(--space-deep));
+    box-shadow: var(--shadow-solar), 0 4px 15px hsl(var(--solar-core) / 0.3);
+  }
+  
+  .btn-solar:hover {
+    @apply scale-110;
+    box-shadow: var(--shadow-solar), 0 8px 25px hsl(var(--solar-core) / 0.5);
+  }
+  
+  .btn-solar::before {
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300;
+    content: '';
+    background: linear-gradient(45deg, transparent, hsl(var(--solar-bright) / 0.3), transparent);
+    transform: translateX(-100%);
+  }
+  
+  .btn-solar:hover::before {
+    @apply opacity-100;
+    transform: translateX(100%);
+    transition: transform 0.6s ease-out;
+  }
+  
+  /* Energy Flow Animation */
+  .energy-flow {
+    @apply absolute inset-0 pointer-events-none;
+    background: linear-gradient(90deg, 
+      transparent, 
+      hsl(var(--energy-cyan) / 0.6), 
+      hsl(var(--energy-blue) / 0.8), 
+      hsl(var(--energy-purple) / 0.6), 
+      transparent
+    );
+    animation: energy-pulse 3s ease-in-out infinite;
+  }
+  
+  /* Floating Elements */
+  .floating {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .floating-delayed {
+    animation: float 6s ease-in-out infinite 2s;
+  }
+  
+  /* Text Gradients */
+  .text-solar-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-solar);
+  }
+  
+  .text-energy-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-energy);
+  }
+  
+  /* Particle Background */
+  .particles-bg {
+    @apply absolute inset-0 pointer-events-none overflow-hidden;
+  }
+  
+  .particle {
+    @apply absolute w-1 h-1 rounded-full;
+    background: hsl(var(--solar-core));
+    animation: particle-float 15s linear infinite;
+    opacity: 0.6;
+  }
+  
+  /* Premium Hover Effects */
+  .hover-lift {
+    @apply transform transition-all duration-300 hover:-translate-y-2;
+    @apply hover:shadow-2xl;
+  }
+  
+  .hover-glow {
+    @apply transition-all duration-300;
+  }
+  
+  .hover-glow:hover {
+    filter: drop-shadow(0 0 20px hsl(var(--solar-core) / 0.6));
+  }
+  
+  /* Solar Panel Grid */
+  .solar-grid {
+    background-image: 
+      linear-gradient(45deg, hsl(var(--solar-core) / 0.1) 25%, transparent 25%),
+      linear-gradient(-45deg, hsl(var(--solar-core) / 0.1) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, hsl(var(--solar-core) / 0.1) 75%),
+      linear-gradient(-45deg, transparent 75%, hsl(var(--solar-core) / 0.1) 75%);
+    background-size: 60px 60px;
+    background-position: 0 0, 0 30px, 30px -30px, -30px 0px;
+  }
+}
+
+/* ADVANCED ANIMATIONS */
+@layer utilities {
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    25% { transform: translateY(-10px) rotate(1deg); }
+    50% { transform: translateY(-15px) rotate(0deg); }
+    75% { transform: translateY(-5px) rotate(-1deg); }
+  }
+  
+  @keyframes energy-pulse {
+    0%, 100% { opacity: 0.3; transform: translateX(-100%); }
+    50% { opacity: 1; transform: translateX(100%); }
+  }
+  
+  @keyframes particle-float {
+    0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+    10% { opacity: 0.6; }
+    90% { opacity: 0.6; }
+    100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+  }
+  
+  @keyframes solar-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  @keyframes pulse-glow {
+    0%, 100% { 
+      box-shadow: 0 0 20px hsl(var(--solar-core) / 0.4);
+      transform: scale(1);
+    }
+    50% { 
+      box-shadow: 0 0 40px hsl(var(--solar-core) / 0.8);
+      transform: scale(1.02);
+    }
+  }
+  
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  
+  /* Animation Classes */
+  .animate-solar-spin { animation: solar-spin 20s linear infinite; }
+  .animate-pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
+  .animate-gradient-shift { animation: gradient-shift 8s ease infinite; }
+  .animate-energy-flow { animation: energy-pulse 3s ease-in-out infinite; }
+}
