@@ -16,7 +16,7 @@ const SolarEd = () => {
       duration: '2-3 hours',
       level: 'Beginner',
       modules: 6,
-      url: 'https://www.energy.gov/eere/solar/solar-energy-basics',
+      url: "https://www.energy.gov/eere/solar/solar-photovoltaic-technology-basics",
       icon: '☀️'
     },
     {
@@ -26,7 +26,7 @@ const SolarEd = () => {
       duration: '4-5 hours',
       level: 'Intermediate',
       modules: 8,
-      url: 'https://www.seia.org/solar-basics',
+      url: 'https://www.electronicsandyou.com/solar-panel-installation-guide-step-by-step-process.html',
       icon: '🔧'
     },
     {
@@ -56,7 +56,7 @@ const SolarEd = () => {
       duration: '2-3 hours',
       level: 'Intermediate',
       modules: 5,
-      url: 'https://www.energy.gov/energysaver/solar-maintenance-and-support',
+      url: "https://www.energy.gov/femp/optimizing-solar-photovoltaic-performance-longevity",
       icon: '⚙️'
     },
     {
@@ -76,7 +76,7 @@ const SolarEd = () => {
       duration: '3-4 hours',
       level: 'Intermediate',
       modules: 6,
-      url: 'https://www.seia.org/research-resources/solar-policy',
+      url: 'https://www.epa.gov/environmental-economics/economic-incentives',
       icon: '📋'
     },
     {
